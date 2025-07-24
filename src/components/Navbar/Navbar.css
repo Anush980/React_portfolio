@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 100vw;
+    height: 12vh;
+    background-color: var(--nav-color);
+    padding-inline: 3vw;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+header span {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+ul a {
+    color: red;
+}
+
+a li {
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+a li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease-in-out;
+}
+
+a li:hover::after {
+    width: 100%;
+}
+
+a li:hover {
+    color: var(--text-color-hover);
+    transform: scale(1.14);
+
+}

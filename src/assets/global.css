@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --background-color: #060919;
+    --nav-color: #060817;
+    --about-background-color: #0d0d0e;
+    --text-color: #c5c4c4;
+    --text-color-hover: #ffffff;
+    --main-color: #6fd21d;
+    --animate-color: #56b20b;
+    --socialLink-color: #a5a3a3;
+    --button-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    --box-shadow: rgba(8, 255, 255, 0.257);
+    --box-shadow-hover: rgba(0, 255, 255, 0.563);
+}
+
+html,
+body {
+    background-color: var(--background-color);
+    overflow: hidden;
+}

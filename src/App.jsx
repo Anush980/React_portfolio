@@ -12,10 +12,15 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
    
   
   <Home/>
    
+=======
+       <Home /> 
+      
+>>>>>>> 8ac5d9a936ae918374b2f61636879c14d5dc2c4b
     </>
   );
 }

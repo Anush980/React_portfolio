@@ -9,6 +9,7 @@ header {
     background-color: var(--nav-color);
     padding-inline: 3vw;
     align-items: center;
+    z-index: 999;
 }
 
 .logo {

@@ -5,12 +5,13 @@ import { document } from '../config/cv';
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import Button from "../components/Button/button";
 import { cvDownload } from "../utils/cv";
+import ProfileCircle from "../components/ProfileCircle/ProfileCircle";
 
 function Home() {
   return (
     <>
-    <Navbar/> 
-     <div className="hero">
+      <Navbar />
+      <div className="hero">
         <div className="left">
           <h1>
             Hi, I'm <span>Anush Shrestha</span>
@@ -25,19 +26,17 @@ function Home() {
             solutions through code.
           </p>
           <div className="buttonBox">
-            <Button label='Download CV' varient="secondary" onClick={cvDownload}/>
+            <Button label='Download CV' varient="secondary" onClick={cvDownload} />
           </div>
-          
-          <SocialLinks align="left" direction="row"/>
+
+          <SocialLinks align="left" direction="row" />
         </div>
 
         <div className="right">
-          <div className="circle">
-            <img src={images.profilePic} alt="Anush Shrestha" className="profilePic" />
-          </div>
+         <ProfileCircle width='24rem' height='24rem'/>
         </div>
       </div>
-   
+
     </>
   );
 }

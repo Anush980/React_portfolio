@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../components/Title/Title'
 import './Contact.css';
 
@@ -11,4 +10,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact;

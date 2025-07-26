@@ -25,7 +25,7 @@ const defaultLinks = [
 
 const SocialLinks = ({
   links = defaultLinks,
-  align = 'left',
+  align = 'center',
   direction = 'row',
   iconSize = '1.7rem',
 }) => {

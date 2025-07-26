@@ -25,7 +25,7 @@ const About = () => {
                             <AboutData />
                         </div>
                         <div className="buttonBox">
-                            <Button label='Read more' varient='primary' />
+                            <Button label='View Projects' varient='primary' />
 
                         </div>
                     </div>

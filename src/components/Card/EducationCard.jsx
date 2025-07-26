@@ -8,8 +8,8 @@ const EducationCard = () => {
             {cardData.map((card, index) => (
                 <div className="card" key={index}>
                     <h3>{card.title}</h3>
-                    <p>University:{card.university}</p>
-                    <p>Year:{card.year}</p>
+                    <p>University: {card.university}</p>
+                    <p>Year: {card.year}</p>
                 </div>
             ))}
         </div>

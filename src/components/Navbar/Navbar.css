@@ -31,20 +31,25 @@ ul {
     gap: 30px;
 }
 
-ul a {
-    color: red;
-}
-
-a li {
+a {
+    color: inherit;
+    text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     position: relative;
     color: var(--text-color);
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
 }
 
-a li::after {
+
+a:hover {
+    color: var(--text-color-hover);
+    transform: scale(1.14);
+}
+
+a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -55,12 +60,6 @@ a li::after {
     transition: width 0.3s ease-in-out;
 }
 
-a li:hover::after {
+a:hover::after {
     width: 100%;
-}
-
-a li:hover {
-    color: var(--text-color-hover);
-    transform: scale(1.14);
-
 }

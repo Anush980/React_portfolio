@@ -1,6 +1,6 @@
 import React from 'react'
 import cardData from '../../data/cardData'
-import './skillCard.css';
+import './Card.css';
 
 const SkillCard = () => {
     return (

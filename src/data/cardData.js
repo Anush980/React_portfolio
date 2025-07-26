@@ -1,7 +1,7 @@
 const cardData = [
     {
         title: "Web Development",
-        description: "I build responsive and performant websites using React."
+        description: "I build responsive and performant websites using basic languages."
     },
     {
         title: "Mobile Apps",
@@ -9,18 +9,19 @@ const cardData = [
     },
 
     {
-        title: "ljkhlkjlkjkjhkkj",
-        description: "I design cross-platform apps with Flutter."
+        title: "JAVA",
+        description: "Have some ideal knowledge with java and swing."
     },
     {
-        title: "Testing...",
-        description: "This comes from data/cardData.js"
+        title: "MERN",
+        description: "Currently learning starting off with react"
     },
     {
-        title: "Mobile Apps",
-        description: "I design cross-platform apps with Flutter."
-    },
-   
+        title: "Other language",
+        description: "Worked with other languages like C sql php for small project building purposes."
+    }
+    
+
 
 
 ];

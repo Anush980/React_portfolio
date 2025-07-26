@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <header>
             <div className="logo">
-                <Link to="home" smooth={true} duration={500}>
+                <Link to="home" smooth={true} duration={400} offset={-70} activeClass="active" spy={true}>
                     <span>Anush.</span>
                 </Link>
             </div>

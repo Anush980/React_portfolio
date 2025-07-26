@@ -1,0 +1,28 @@
+.typewriter {
+  display: flex;
+  padding-left: 3rem;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.typewriter h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 0.06rem var(--animate-color);
+  border-right: 0.1em solid rgb(214, 214, 214);
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeWriter 5s steps(30) infinite;
+}
+@keyframes typeWriter {
+  0% {
+    width: 0ch;
+  }
+
+  100% {
+    width: 16.8ch;
+  }
+}

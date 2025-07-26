@@ -1,0 +1,19 @@
+.about{
+    min-height: 100vh;
+   
+}
+.about .container{
+  display: flex;
+  gap:10rem;
+}
+.about .container .left {
+ margin-left: 2rem;
+ min-width: 30vw;
+}
+
+
+
+.about .container .right {
+  max-width: 50%;
+}
+

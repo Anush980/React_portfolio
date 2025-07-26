@@ -1,26 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import Home from "./pages/Home";
 import "./App.css";
-import Button from "./components/Button/button";
-import { cvDownload } from "./utils/cv";
-import Skills from "./pages/Skills";
-import SkillCard from "./components/SkillCard/skillCard";
-import Title from "./components/Title/Title";
-import ProfileCircle from "./components/ProfileCircle/ProfileCircle";
-function App() {
 
+import Home from "./pages/Home/Home";
+import Skills from "./pages/Skills/Skills";
+import About from "./pages/About/About";
+import Navbar from "./components/Navbar/Navbar";
+
+function App() {
   return (
     <>
-<<<<<<< HEAD
-   
-  
-  <Home/>
-   
-=======
-       <Home /> 
-      
->>>>>>> 8ac5d9a936ae918374b2f61636879c14d5dc2c4b
+      <Navbar />
+      <div id="home"><Home /></div>
+      <div id="about"><About /></div>
+      <div id="skills"><Skills /></div>
+
+
     </>
   );
 }

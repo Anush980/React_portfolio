@@ -5,6 +5,7 @@ const Contact = () => {
     return (
         <section id="contact" className='contact'>
             <Title first='Contact' label='Me' />
+            
         </section>
 
     )

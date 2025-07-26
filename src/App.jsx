@@ -6,6 +6,7 @@ import About from "./pages/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Education from "./pages/Education/Education";
 import Contact from "./pages/Contact/Contact";
+import ScrollDown from "./components/scrollDown/ScrollDown";
 
 function App() {
   return (

@@ -5,7 +5,7 @@ import TypeWriter from '../../components/AnimatedText/TypeWriter'
 import AboutData from '../../components/AboutData/AboutData'
 import Button from '../../components/Button/button'
 import './About.css';
-import Navbar from '../../components/Navbar/Navbar'
+import ScrollDown from "../../components/scrollDown/ScrollDown";
 
 const About = () => {
     return (
@@ -31,7 +31,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }

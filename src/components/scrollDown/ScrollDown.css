@@ -1,0 +1,27 @@
+.scroll-down-container {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 48%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.scroll-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color:white;
+  border:1.5px solid rgb(255, 255, 255);
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}

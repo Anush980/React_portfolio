@@ -5,17 +5,20 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.1rem;
-  margin-left: 9.5rem;
+  margin-left: 1rem;
 
 }
 
 
-.socialLinks.left {
-  justify-content: flex-start;
+.socialLinks.home {
+  margin-top: 1rem;
+  margin-left: 10.3rem;
 }
 
-.socialLinks.center {
-  justify-content: center;
+.socialLinks.con {
+ margin-top: 3rem;
+ margin-left: 3rem;
+
 }
 
 .socialLinks.right {

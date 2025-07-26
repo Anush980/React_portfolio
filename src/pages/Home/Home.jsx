@@ -25,7 +25,7 @@ function Home() {
             />
           </div>
 
-          <SocialLinks align="left" direction="row" />
+          <SocialLinks align="home" direction="row" />
         </div>
 
         <div className="right">

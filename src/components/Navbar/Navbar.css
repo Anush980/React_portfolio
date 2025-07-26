@@ -39,7 +39,7 @@ header span {
     position: relative;
     color: var(--text-color);
     cursor: pointer;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
     display: inline-block;
 }
 
@@ -48,6 +48,15 @@ header span {
     color: var(--text-color-hover);
     transform: scale(1.14);
 }
+.right a.active {
+    color: var(--text-color-hover);
+    transform: scale(1.14);
+}
+
+.right a.active::after {
+    width: 100%;
+}
+
 
 .right a::after {
     content: "";

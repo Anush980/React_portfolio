@@ -15,6 +15,7 @@ function App() {
       <div id="education"><Education /></div>
       <div id="skills" ><Skills /></div>
       <div id="contact"><Contact /></div>
+     
     </>
   );
 }

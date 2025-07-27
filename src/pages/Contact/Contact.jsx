@@ -1,6 +1,6 @@
 import SocialLinks from '../../components/SocialLinks/SocialLinks';
 import './Contact.css';
-import Button from '../../components/Button/button';
+import Button from '../../components/Button/Button';
 import Title from '../../components/Title/Title';
 
 const Contact = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
                         <input type="text" name="name" placeholder="Your Name" required />
                         <input type="email" name="email" placeholder="Your Email" required />
                         <textarea name="message" placeholder="Your Message" required></textarea>
-                        <Button label='Send Message' />
+                        <Button >Send Message</Button>
                     </form>
                 </div>
             </div>

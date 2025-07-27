@@ -25,6 +25,6 @@
 html,
 body {
     background-color: var(--background-color);
-    overflow:hidden;
+    /* overflow:hidden; */
     overflow-x: hidden;
 }

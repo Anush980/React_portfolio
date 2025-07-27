@@ -1,8 +1,20 @@
-.title-wrapper{
-     margin-bottom: 50px;  
-     font-size: 1.3rem; 
+.title-wrapper {
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%; 
 }
 
-span{
-     color: var(--main-color);
+.title-heading {
+  font-size: 2rem;
+  display: inline-block; 
+}
+
+.title-highlight {
+  color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .title-heading {
+    font-size: 1.8rem;
+  }
 }

@@ -1,4 +1,4 @@
-import './socialLinks.css';
+import './SocialLinks.css';
 
 const defaultLinks = [
   {
@@ -28,9 +28,10 @@ const SocialLinks = ({
   align = 'center',
   direction = 'row',
   iconSize = '1.7rem',
+  variant = 'default', // 'default', 'home', or 'contact'
 }) => {
   return (
-    <div className={`socialLinks ${align} ${direction}`}>
+    <div className={`social-links social-links--${variant} social-links--${align} social-links--${direction}`}>
       {links.map((link, index) => (
         <a
           key={index}
@@ -38,6 +39,7 @@ const SocialLinks = ({
           target="_blank"
           rel="noreferrer"
           aria-label={link.name}
+          className="social-links__link"
         >
           <i
             className={link.iconClass}

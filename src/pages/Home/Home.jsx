@@ -1,6 +1,6 @@
 import "./Home.css";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
-import Button from "../../components/Button/button";
+import Button from "../../components/Button/Button";
 import { cvDownload } from "../../utils/cv";
 import ProfileCircle from "../../components/ProfileCircle/ProfileCircle";
 import TypeWriter from "../../components/AnimatedText/TypeWriter";
@@ -9,31 +9,34 @@ import ScrollDown from "../../components/scrollDown/ScrollDown";
 
 function Home() {
   return (
-    <section id="home">
-      <div className="hero">
-        <div className="left">
+    <section id="home" className="home-section">
+      <div className="hero-content">
+        <div className="text-content">
           <h1>
             Hi, I'm <span>Anush Shrestha</span>
           </h1>
           <TypeWriter label="NOOB PROGRAMMER" />
           <HomeData />
-          <div className="homeButton">
+          <div className="home-button-container">
             <Button
-              label="Download CV"
-              varient="secondary"
+              varient="primary"  // Changed to primary as requested
               onClick={cvDownload}
-            />
+            >Download CV</Button>
           </div>
-
-          <SocialLinks align="home" direction="row" />
+        <SocialLinks 
+  align="center" 
+  direction="row" 
+  variant="home"
+/>
         </div>
-
-        <div className="right">
-          <ProfileCircle width="24rem" height="24rem" />
-        </div>
+        <ProfileCircle width='20rem' height='20rem' />
       </div>
-      <ScrollDown location="about"/>
+      <div className="scroll">
+  <ScrollDown location="about"/>
+      </div>
+    
     </section>
   );
 }
+
 export default Home;

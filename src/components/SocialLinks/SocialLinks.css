@@ -1,0 +1,66 @@
+/* Base styles */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Link styles */
+.social-links__link {
+  color: var(--socialLink-color);
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.social-links__link:hover {
+  transform: scale(1.13);
+  color: var(--primary-color);
+}
+
+/* Alignment modifiers */
+.social-links--center {
+  justify-content: center;
+}
+
+.social-links--left {
+  justify-content: flex-start;
+}
+
+.social-links--right {
+  justify-content: flex-end;
+}
+
+/* Direction modifiers */
+.social-links--row {
+  flex-direction: row;
+}
+
+.social-links--column {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Variant modifiers */
+.social-links--home {
+  margin-top: 2rem;
+}
+
+.social-links--contact {
+  margin-top: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-links--home,
+  .social-links--contact {
+    margin-left: 0;
+  }
+}

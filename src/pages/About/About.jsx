@@ -3,7 +3,7 @@ import Title from '../../components/Title/Title'
 import ProfileCircle from '../../components/ProfileCircle/ProfileCircle'
 import TypeWriter from '../../components/AnimatedText/TypeWriter'
 import AboutData from '../../components/AboutData/AboutData'
-import Button from '../../components/Button/button'
+import Button from '../../components/Button/Button'
 import './About.css';
 import ScrollDown from "../../components/scrollDown/ScrollDown";
 
@@ -24,10 +24,12 @@ const About = () => {
                             <TypeWriter label='NOOB PROGRAMMER' />
                             <AboutData />
                         </div>
-                        <div className="buttonBox">
-                            <Button label='View Projects' varient='primary' />
-
-                        </div>
+                      <div className="home-button-container">
+                                  <Button
+                                    varient="primary"  // Changed to primary as requested
+                                    // onClick={cvDownload}
+                                  >View Projects</Button>
+                                </div>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
-import SocialLinks from '../../components/SocialLinks/SocialLinks';
-import './Contact.css';
-import Button from '../../components/Button/Button';
-import Title from '../../components/Title/Title';
 import { FaTimes } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import PropTypes from 'prop-types';
+import SocialLinks from '../SocialLinks/SocialLinks';
+import Button from '../Button/Button';
+import './ContactForm.css';
 
-const Contact = () => {
+const ContactForm = ({
+    serviceId = 'default_service',
+    templateId = 'template_default',
+    userId = 'user_default',
+    formTitle = 'Get In Touch',
+    formDescription = 'Have a project in mind or just want to say hello? Drop me a message!',
+    successMessage = 'Message sent successfully!',
+    errorMessage = 'Failed to send message. Please try again.',
+    buttonText = 'Send Message',
+    buttonSendingText = 'Sending...',
+    showSocialLinks = true,
+    contactInfo = {
+        email: 'your@email.com',
+        phone: '+000 00000000',
+        location: 'Your Location'
+    }
+}) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,8 +34,8 @@ const Contact = () => {
     const formRef = useRef();
 
     useEffect(() => {
-        emailjs.init('QNm3URpD8g5ba1cmC');
-    }, []);
+        emailjs.init(userId);
+    }, [userId]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,16 +48,16 @@ const Contact = () => {
 
         try {
             await emailjs.sendForm(
-                'default_service',
-                'template_a71wbsh',
+                serviceId,
+                templateId,
                 formRef.current,
-                'QNm3URpD8g5ba1cmC'
+                userId
             );
 
             setSubmitStatus('success');
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
-            console.error('Email failed to send:', error);
+            console.error('Email send error:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
@@ -58,16 +74,20 @@ const Contact = () => {
         <section className="contact-section" id="contact">
             <div className="contact-container">
                 <div className="contact-info">
-                    <Title first='Contact' label='Me' />
-                    <p><strong>Email:</strong> anush.stha232@gmail.com</p>
-                    <p><strong>Phone:</strong> +977 9826999469</p>
-                    <p><strong>Location:</strong> Nepal</p>
-                    <SocialLinks align='center' direction="row" />
+                    <h2>Contact Me</h2>
+                    <p><strong>Email:</strong> {contactInfo.email}</p>
+                    <p><strong>Phone:</strong> {contactInfo.phone}</p>
+                    <p><strong>Location:</strong> {contactInfo.location}</p>
+                    {showSocialLinks && (
+                        <div className="social-links">
+                            <SocialLinks align='center' direction="row" />
+                        </div>
+                    )}
                 </div>
 
                 <div className="contact-form">
-                    <h2>Get In Touch</h2>
-                    <p>Have a project in mind or just want to say hello? <br/>Drop me a message!</p>
+                    <h2>{formTitle}</h2>
+                    <p>{formDescription}</p>
                     <form ref={formRef} onSubmit={handleSubmit}>
                         <input
                             type="text"
@@ -92,22 +112,24 @@ const Contact = () => {
                             onChange={handleChange}
                             required
                         ></textarea>
-                        <Button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
-                        </Button>
+                        <button 
+                            type="submit" 
+                            className="submit-button"
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? buttonSendingText : buttonText}
+                        </button>
                     </form>
 
                     {showStatus && submitStatus && (
                         <div className={`form-status ${submitStatus}`}>
                             <p>
-                                {submitStatus === 'success'
-                                    ? 'Message sent successfully!'
-                                    : 'Failed to send message. Please try again.'}
+                                {submitStatus === 'success' ? successMessage : errorMessage}
                             </p>
-                            <button
-                                className="close-status"
+                            <button 
+                                className="close-status" 
                                 onClick={closeStatus}
-                                aria-label="Close message"
+                                aria-label="Close status message"
                             >
                                 <FaTimes />
                             </button>
@@ -119,4 +141,23 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+ContactForm.propTypes = {
+    serviceId: PropTypes.string,
+    templateId: PropTypes.string,
+    userId: PropTypes.string,
+    recipientEmail: PropTypes.string,
+    formTitle: PropTypes.string,
+    formDescription: PropTypes.string,
+    successMessage: PropTypes.string,
+    errorMessage: PropTypes.string,
+    buttonText: PropTypes.string,
+    buttonSendingText: PropTypes.string,
+    showSocialLinks: PropTypes.bool,
+    contactInfo: PropTypes.shape({
+        email: PropTypes.string,
+        phone: PropTypes.string,
+        location: PropTypes.string
+    })
+};
+
+export default ContactForm;

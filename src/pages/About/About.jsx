@@ -17,22 +17,23 @@ const About = () => {
                     <div class="left">
                         <ProfileCircle height='20rem' width='20rem' />
                     </div>
-                    
-<div className="about-container">
+
+                    <div className="about-container">
                         <div className="aboutme">
                             <TypeWriter label='NOOB PROGRAMMER' />
                             <AboutData />
                         </div>
                         <div className="home-button-container">
                             <Button
-                                varient="primary" 
+                                varient="primary"
+                                onClick={() => window.open("https://github.com/Anush980?tab=repositories", "_blank")}
                             >View Projects</Button>
-                        
-                    </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
     )

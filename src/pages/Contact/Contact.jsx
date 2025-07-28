@@ -4,6 +4,7 @@ import './Contact.css';
 import Button from '../../components/Button/Button';
 import Title from '../../components/Title/Title';
 import { FaTimes } from 'react-icons/fa';
+import emailjs from '@emailjs/browser'; // Add this import
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -19,7 +20,6 @@ const Contact = () => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
-
 
     useEffect(() => {
         let timer;
@@ -37,21 +37,18 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("https://formspree.io/f/xqaqdebr", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            
+            await emailjs.send(
+                'service_ntj49ue', // Your service ID
+                'xd7s1xh', // Your template ID
+                formData,
+                'QNm3URpD8g5ba1cmC' // Your user ID
+            );
 
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({ name: '', email: '', message: '' });
-            } else {
-                setSubmitStatus('error');
-            }
+            setSubmitStatus('success');
+            setFormData({ name: '', email: '', message: '' });
         } catch (error) {
+            console.error('Failed to send email:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);

@@ -9,8 +9,6 @@ This is my personal portfolio built using **React.js**. It showcases my profile,
 ## 🌐 Live Preview
 
 👉 [View Live Portfolio](https://react-portfolio-jade-tau.vercel.app/)  
-(Optimized for larger screens)
-(Will be Optimized for smaller screens in the future)
 
 ---
 ## 📁 Folder Structure

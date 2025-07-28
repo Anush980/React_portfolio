@@ -1,19 +1,23 @@
-.about{
-    min-height: 100vh;
-   
+.about {
+  min-height: 100vh;
+
 }
-.about .container{
+
+.about .container {
   display: flex;
-  gap:10rem;
+  gap: 10rem;
 }
+
 .about .container .left {
- margin-left: 2rem;
- min-width: 30vw;
+  margin-left: 2rem;
+  min-width: 30vw;
 }
 
-
-
-.about .container .right {
+.about .container .right-container {
   max-width: 50%;
 }
-
+@media (max-width: 768px) {
+  .left{
+    display: none;
+  }
+}

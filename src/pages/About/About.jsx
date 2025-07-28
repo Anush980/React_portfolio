@@ -5,7 +5,6 @@ import TypeWriter from '../../components/AnimatedText/TypeWriter'
 import AboutData from '../../components/AboutData/AboutData'
 import Button from '../../components/Button/Button'
 import './About.css';
-import ScrollDown from "../../components/scrollDown/ScrollDown";
 
 const About = () => {
     return (
@@ -18,22 +17,24 @@ const About = () => {
                     <div class="left">
                         <ProfileCircle height='20rem' width='20rem' />
                     </div>
-                    <div className="right">
-
+                    
+<div className="about-container">
                         <div className="aboutme">
                             <TypeWriter label='NOOB PROGRAMMER' />
                             <AboutData />
                         </div>
-                      <div className="home-button-container">
-                                  <Button
-                                    varient="primary"  // Changed to primary as requested
-                                    // onClick={cvDownload}
-                                  >View Projects</Button>
-                                </div>
+                        <div className="home-button-container">
+                            <Button
+                                varient="primary" 
+                            >View Projects</Button>
+                        
+                    </div>
                     </div>
                 </div>
             </div>
+            
         </section>
+
     )
 }
 

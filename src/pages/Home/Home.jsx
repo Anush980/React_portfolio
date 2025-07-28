@@ -19,7 +19,7 @@ function Home() {
           <HomeData />
           <div className="home-button-container">
             <Button
-              varient="primary"  // Changed to primary as requested
+              varient="primary"
               onClick={cvDownload}
             >Download CV</Button>
           </div>
@@ -28,8 +28,10 @@ function Home() {
   direction="row" 
   variant="home"
 />
+        </div><div className="profileCircle-container">
+ <ProfileCircle width='20rem' height='20rem' />
         </div>
-        <ProfileCircle width='20rem' height='20rem' />
+       
       </div>
       <div className="scroll">
   <ScrollDown location="about"/>

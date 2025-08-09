@@ -8,7 +8,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <section id="about">
+        <section id="about" className='about' >
             <div className="about">
                 <Title first='About' label='Me' />
 

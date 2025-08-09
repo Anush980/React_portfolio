@@ -1,12 +1,9 @@
-
-.skills{
-    min-height: 100vh;
+.skills {
+    min-height: calc(100vh - 63px);
+    padding-top: 83px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
 
 }
-
-
-

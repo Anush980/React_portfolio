@@ -6,7 +6,7 @@ import ScrollDown from '../../components/scrollDown/ScrollDown';
 
 const Education = () => {
     return (
-        <section id="education" className="education">
+        <section id="education" className="education" >
             <Title first="My" label="Educations" />
             <EducationCard />
         </section>

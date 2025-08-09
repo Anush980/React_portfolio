@@ -1,6 +1,7 @@
 .about {
-  min-height: 100vh;
-
+  min-height: calc(100vh - 63px);
+  padding-top: 60px;
+  width:99%;
 }
 
 .about .container {

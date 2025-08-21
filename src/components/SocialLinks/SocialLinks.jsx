@@ -9,7 +9,7 @@ const defaultLinks = [
   },
 
   {
-    href: 'https://wa.me/9779826999469?text=Hello%20there!',
+    href: 'https://wa.me/9779826999469?text=Hi',
     iconClass: 'fab fa-whatsapp',
     name: 'WhatsApp',
     // href: 'https://www.instagram.com/_anush232',

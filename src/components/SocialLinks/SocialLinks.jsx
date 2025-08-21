@@ -5,11 +5,16 @@ const defaultLinks = [
     href: 'https://www.facebook.com/Anush232',
     iconClass: 'fab fa-facebook',
     name: 'Facebook',
+     
   },
+
   {
-    href: 'https://www.instagram.com/_anush232',
-    iconClass: 'fab fa-instagram',
-    name: 'Instagram',
+    href: 'https://wa.me/9779826999469?text=Hello%20there!',
+    iconClass: 'fab fa-whatsapp',
+    name: 'WhatsApp',
+    // href: 'https://www.instagram.com/_anush232',
+    // iconClass: 'fab fa-instagram',
+    // name: 'Instagram',
   },
   {
     href: 'https://www.github.com/Anush980',

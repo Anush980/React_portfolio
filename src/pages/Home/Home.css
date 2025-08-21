@@ -66,9 +66,7 @@
 
 
 @media (max-width: 480px) {
-  .home-section {
- 
-  }
+  
   
   .text-content h1 {
     font-size: 1.6rem;
@@ -79,5 +77,6 @@
   }
    .scroll{
     display: none;
+  }
   }
 }

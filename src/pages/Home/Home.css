@@ -1,7 +1,7 @@
 .home-section {
   height: calc(100vh - 63px);
   margin: 5%;
-  padding: 1px 5%;
+  padding: 1px 2%;
   display: flex;
   flex-direction: column;
   overscroll-behavior-inline: hidden;
@@ -13,7 +13,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 10rem;
 }
 
 .text-content {
@@ -67,12 +67,12 @@
 
 @media (max-width: 480px) {
   .home-section {
-    padding: 2rem 1rem;
+ 
   }
   
   .text-content h1 {
     font-size: 1.6rem;
-  }
+  
   
   .text-content h1 span {
     font-size: 2rem;

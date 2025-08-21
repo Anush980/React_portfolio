@@ -18,7 +18,14 @@
   max-width: 50%;
 }
 @media (max-width: 768px) {
-  .left{
-    display: none;
+  .about{
+    padding-top: none;
   }
+ .about .container {
+  flex-direction: column;
+  gap:3rem;
+}
+.about .container .left {
+  margin: 0 auto;
+}
 }

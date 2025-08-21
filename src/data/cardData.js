@@ -7,13 +7,8 @@ const cardData = [
         title: "Mobile Apps",
         description: "I design cross-platform apps with Flutter."
     },
-
     {
-        title: "JAVA",
-        description: "Have some ideal knowledge with java and swing."
-    },
-    {
-        title: "MERN",
+        title: "M.E.R.N",
         description: "Currently learning starting off with react"
     },
     {

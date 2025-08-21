@@ -6,3 +6,8 @@
      justify-content: start;
      align-items: center;
  }
+ @media(max-width:720px){
+.education{
+    padding-top: 1px;
+}
+ }

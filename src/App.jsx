@@ -1,5 +1,3 @@
-
-import { useEffect } from 'react';
 import React from 'react';
 import "./App.css";
 import Home from "./pages/Home/Home";
@@ -8,7 +6,6 @@ import About from "./pages/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Education from "./pages/Education/Education";
 import Contact from "./pages/Contact/Contact";
-import AOS from "aos";
 
 
 function App() {
